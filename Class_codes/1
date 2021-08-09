@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+class school{
+       public:
+       string name;
+      // string inp_name;
+       school(string inp_nam)
+       {
+       inp_name = inp_nam;
+       }
+
+       void setname(){
+	       name = inp_name;
+       }
+
+    private: 
+       //string name;
+       string inp_name;
+
+};
+
+
+class college: public school{
+    public:
+      void print_name(){
+        cout << name << endl;
+    }
+
+};
+
+int main() {
+
+school obj("som");
+obj.setname();
+//cout << obj.name << endl;
+college obj2("shan");
+obj2.print_name();
+}
